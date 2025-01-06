@@ -37,7 +37,9 @@ export function DevOpsHeroSection() {
               variant="secondary"
               className="bg-white text-[#3584C0] hover:bg-gray-100 text-lg px-8 py-4"
             >
+                  <a href="/contact-us">
               Contact Us
+              </a>
             </Button>
           </motion.div>
         </FadeInSection>

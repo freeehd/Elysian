@@ -23,7 +23,9 @@ export function HeroSection() {
             size="lg"
             className="bg-[#5431FF] text-white hover:bg-[#4124DB]"
           >
-            Contact Us
+                <a href="/contact-us">
+              Contact Us
+              </a>
           </Button>
         </div>
       </div>
