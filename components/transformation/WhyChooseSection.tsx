@@ -54,7 +54,7 @@ export function WhyChooseSection() {
         <FadeInSection>
           <div className="text-center mb-16">
             <span className="text-[#3584C0] text-lg">Why Elysian Innovations</span>
-            <h2 className="text-4xl font-bold mt-2 text-gray-800">
+            <h2 className="text-4xl font-bold mt-2 text-gray-800                                           ">
               Why Choose Our Transformation Services?
             </h2>
           </div>

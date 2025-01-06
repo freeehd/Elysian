@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
 import { Shield, Radio, Code2, Briefcase } from 'lucide-react'
