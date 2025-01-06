@@ -25,7 +25,7 @@ export function HeroSection() {
               Maximize Efficiency and Adaptability
             </h1>
             <p className="mb-8 text-xl leading-relaxed text-white/90">
-              Arcana enhances your team's capabilities across the board, including management, monitoring, incident detection, disaster recovery, backup solutions, and comprehensive security measures.
+              Elysian Innovation enhances your team's capabilities across the board, including management, monitoring, incident detection, disaster recovery, backup solutions, and comprehensive security measures.
             </p>
             <Button 
               size="lg"

@@ -23,11 +23,11 @@ export function DevOpsHeroSection() {
           >
             <h2 className="text-2xl font-semibold mb-4">DevOps</h2>
             <h1 className="text-5xl font-bold mb-6">
-              Transform Your Operations with Arcana's DevOps Expertise
+              Transform Your Operations with Elysian Innovation's DevOps Expertise
             </h1>
             <p className="text-xl text-white/90 leading-relaxed max-w-3xl mb-8">
               In today's fast-paced digital landscape, efficient and reliable software development and IT
-              operations are crucial for success. Arcana's DevOps Solutions bridge the gap between
+              operations are crucial for success. Elysian Innovation's DevOps Solutions bridge the gap between
               development and operations, enabling your business to deliver applications and services at high
               velocity. Our comprehensive DevOps services ensure smooth collaboration, integration, and
               automation, fostering innovation and excellence.

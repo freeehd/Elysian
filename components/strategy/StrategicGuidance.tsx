@@ -14,7 +14,7 @@ export function StrategicGuidance() {
               <Card className="relative overflow-hidden">
                 <CardContent className="p-0">
                   <img 
-                    src="/placeholder.svg?height=400&width=600" 
+                    src="/logo.png?height=400&width=600" 
                     alt="Strategic planning session"
                     className="w-full h-auto rounded-lg"
                   />

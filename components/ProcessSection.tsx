@@ -90,13 +90,7 @@ export default function ProcessSection() {
                   activeImage === index ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <Image
-                  src={image}
-                  alt={`Process step illustration ${index + 1}`}
-                  fill
-                  className="object-contain"
-                  priority={index === 0}
-                />
+              
               </div>
             ))}
           </div>

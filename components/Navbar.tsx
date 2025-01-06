@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { Users, User, Box, Cloud, Code2, Server, Settings, Database, BarChart, Building2, Network, Cpu, LineChart, BrainCircuit, BookOpen, Lightbulb, Menu, X, ChevronDown } from 'lucide-react'
+import { Users, User, Box, Cloud, Code2, Server, Settings, Database, BarChart, Building2, Network, Cpu, LineChart, BrainCircuit, BookOpen, Lightbulb, Menu, X, ChevronDown, BoltIcon } from 'lucide-react'
 
 const company = [
   {
@@ -42,15 +42,16 @@ const services = [
     href: "/services/app-modernization",
     icon: Settings,
   },
-  {
-    title: "Resource Augmentation",
-    href: "/services/resource-augmentation",
-    icon: Users,
-  },
+  
   {
     title: "Cloud",
     href: "/services/cloud",
     icon: Cloud,
+  },
+  {
+    title: "DevOps",
+    href: "/services/devops",
+    icon: BoltIcon,
   },
   {
     title: "Software Development",
@@ -62,6 +63,16 @@ const services = [
     href: "/services/infrastructure",
     icon: Server,
   },
+  {
+    title: "Web and Application Development",
+    href: "/services/web-and-application-development",
+    icon: Code2,
+  },
+  {
+    title: "Managed Services",
+    href: "/services/managed-services",
+    icon: Settings,
+  }
 ]
 
 const solutions = [
@@ -259,7 +270,7 @@ export default function NavBar() {
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
-                <NavigationMenuItem>
+                {/* <NavigationMenuItem>
                   <NavigationMenuTrigger 
                     className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0]"
                   >
@@ -282,9 +293,9 @@ export default function NavBar() {
                       ))}
                     </motion.ul>
                   </NavigationMenuContent>
-                </NavigationMenuItem>
+                </NavigationMenuItem> */}
 
-                <NavigationMenuItem>
+                {/* <NavigationMenuItem>
                   <NavigationMenuTrigger 
                     className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0]"
                   >
@@ -307,7 +318,7 @@ export default function NavBar() {
                       ))}
                     </motion.ul>
                   </NavigationMenuContent>
-                </NavigationMenuItem>
+                </NavigationMenuItem> */}
               </NavigationMenuList>
             </NavigationMenu>
           </div>
@@ -339,7 +350,7 @@ export default function NavBar() {
               asChild
               className="bg-[#3584C0] hover:bg-[#2d6fa3] text-white transition-all duration-300 hover:scale-105"
             >
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact-us">Contact Us</Link>
             </Button>
           </motion.div>
         </div>

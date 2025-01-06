@@ -5,7 +5,7 @@ const offerings = [
   {
     icon: Rocket,
     title: "Enterprise Software Development",
-    description: "At Arcana, we specialize in tailored enterprise software development that meets your specific business needs. With a proven track record, we focus on optimizing operations, enhancing efficiency, and ensuring success through our comprehensive ERP software solutions.",
+    description: "At Elysian Innovation, we specialize in tailored enterprise software development that meets your specific business needs. With a proven track record, we focus on optimizing operations, enhancing efficiency, and ensuring success through our comprehensive ERP software solutions.",
     gradient: "from-violet-600 to-violet-800"
   },
   {
@@ -17,7 +17,7 @@ const offerings = [
   {
     icon: Monitor,
     title: "UI/UX Design",
-    description: "Arcana excels in crafting exceptional designs that bring your business ideas to life, ensuring a memorable user experience. From initial concept sketches and wireframes to refined high-fidelity designs and interactive prototypes, we cover all your UI/UX needs.",
+    description: "Elysian Innovation excels in crafting exceptional designs that bring your business ideas to life, ensuring a memorable user experience. From initial concept sketches and wireframes to refined high-fidelity designs and interactive prototypes, we cover all your UI/UX needs.",
     gradient: "from-[#0B1C4D] to-[#142B66]"
   },
   {

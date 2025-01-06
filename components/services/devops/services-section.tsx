@@ -43,7 +43,7 @@ export function ServicesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <FadeInSection>
           <h2 className="text-4xl font-bold mb-4 text-gray-800">
-            Discover <span className="text-[#3584C0]">Arcana's Approach</span>
+            Discover <span className="text-[#3584C0]">Elysian Innovation's Approach</span>
           </h2>
           <p className="text-xl text-gray-600 mb-16 max-w-3xl">
             Our offerings encompass a wide array of solutions, including but not limited to:
