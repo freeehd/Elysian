@@ -1,5 +1,6 @@
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import { BarChartIcon, LayoutIcon, LoopIcon, RocketIcon } from "@radix-ui/react-icons";
+import { cn } from "@/lib/utils"; // Assuming you have a utility function for class names
 
 const services = [
   {
@@ -46,23 +47,22 @@ export default function ServicesGrid() {
       <div className="max-w-5xl mx-auto">
         <BentoGrid className="grid-cols-1 md:grid-cols-2 gap-6 md:auto-rows-[280px]">
           {services.map((service) => (
-            <BentoCard 
-              key={service.name} 
-              {...service}
-              className={`${service.className} p-6 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg overflow-hidden`}
+            <BentoCard
+              key={service.name}
+              name={service.name}
+              className={cn(
+                service.className,
+                "p-6 transition-all duration-300"
+              )}
+              background={
+                <div className={`absolute inset-0 bg-gradient-to-br `} />
+              }
+              Icon={service.Icon}
+              description={service.description}
+              href={service.href}
+              cta={service.cta}
             >
-              <div className={`absolute inset-0 bg-gradient-to-br-from-purple-400 to-pink-600 opacity-20 rounded-lg ${service.gradient}`} />
-              <div className="relative flex flex-col h-full z-10">
-                <div className="mb-4">
-                  <service.Icon className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">
-                  {service.name}
-                </h3>
-                <p className="text-white text-sm opacity-90">
-                  {service.description}
-                </p>
-              </div>
+              
             </BentoCard>
           ))}
         </BentoGrid>
