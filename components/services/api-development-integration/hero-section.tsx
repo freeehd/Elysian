@@ -33,7 +33,9 @@ export function ServicesHeroSection() {
               size="lg"
               className="bg-[#5431FF] text-white hover:bg-[#4124DB]"
             >
+                  <a href="/contact-us">
               Contact Us
+              </a>
             </Button>
           </motion.div>
         </FadeInSection>

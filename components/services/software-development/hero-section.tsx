@@ -17,13 +17,15 @@ export function HeroSection() {
             Custom Software Excellence
           </h1>
           <p className="mb-8 text-xl leading-relaxed text-white/90">
-            Arcana delivers tailored software solutions, ensuring peak effectiveness and performance. Our solutions are forward-thinking and innovative, staying ahead of the technological advancements.
+            Elysian Innovation delivers tailored software solutions, ensuring peak effectiveness and performance. Our solutions are forward-thinking and innovative, staying ahead of the technological advancements.
           </p>
           <Button 
             size="lg"
             className="bg-[#5431FF] text-white hover:bg-[#4124DB]"
           >
-            Contact Us
+                <a href="/contact-us">
+              Contact Us
+              </a>
           </Button>
         </div>
       </div>

@@ -28,9 +28,9 @@ export function ProcessSection() {
         <h2 className="mb-16 text-center text-4xl font-bold text-white">Our Process</h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step) => (
-            <div key={step.number} className="text-center">
+            <div key={step.number} className="text-center text-slate-600">
               <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-white">
-                <span className="text-3xl font-bold text-[#5431FF]">{step.number}</span>
+                <span className="text-3xl font-bold text[#3584C0]">{step.number}</span>
               </div>
               <h3 className="mb-4 text-2xl font-semibold text-white">{step.title}</h3>
               <p className="text-lg text-white/90">{step.description}</p>

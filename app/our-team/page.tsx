@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/no-unescaped-entities */
 'use client'
 
 import { motion } from 'framer-motion'
@@ -19,6 +21,18 @@ const teamMembers = [
     role: "Consultant",
     bio: "Zulfiqar brings 30+ years of expertise in communication and IT, specializing in mobile network deployment, technology management, and innovative solution delivery.",
     expertise: ["Network Deployment", "IT Consulting", "Technology Management"]
+  },
+  {
+    name: "Rizwan Akhtar",
+    role: "Director and COO",
+    bio: "With over 27 years of experience in telecommunications and IT, Rizwan is a passionate advocate for Pakistan's IT industry growth. He excels in strategic planning, program execution, and market entry strategies, fostering creativity and innovation through mentorship.",
+    expertise: [
+      "Tech Strategy Development",
+      "Project Management",
+      "ICT Policy Management",
+      "AI Ethics",
+      "Lawful Interception Systems"
+    ]
   }
 ]
 

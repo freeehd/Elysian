@@ -32,7 +32,9 @@ export function HeroSection() {
               variant="secondary"
               className="bg-white text-blue-600 hover:bg-gray-100"
             >
+              <a href="/contact-us">
               Contact Us
+              </a>
             </Button>
           </motion.div>
         </FadeInSection>

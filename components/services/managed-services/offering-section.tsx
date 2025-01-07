@@ -42,7 +42,7 @@ export function OfferingSection() {
           Our <span className="text-[#3584C0]">Offering</span>
         </h2>
         <p className="mb-16 max-w-3xl text-lg text-gray-600">
-          Arcana provides a wide range of customized solutions designed to align with your specific goals. Our services include:
+          Elysian Innovation provides a wide range of customized solutions designed to align with your specific goals. Our services include:
         </p>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {offerings.map((offering) => (

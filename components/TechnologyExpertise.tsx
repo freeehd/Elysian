@@ -52,7 +52,7 @@ export default function TechnologyExpertise() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8">
           {technologies.map((tech) => (
             <FadeInSection key={tech.name}>
-              <div className="group relative bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
+              <div className="group relative bg-white dark:bg-gray-100 dark:opacity-100 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center">
                 <div className="relative w-16 h-16">
                   <Image
                     src={tech.logo}
@@ -61,8 +61,8 @@ export default function TechnologyExpertise() {
                     className="object-contain transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white dark:from-gray-800 to-transparent p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-center text-sm font-medium text-gray-700 dark:text-gray-300">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white dark:to-transparent p-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-center text-sm font-bold text-blue-500 ">
                     {tech.name}
                   </p>
                 </div>
