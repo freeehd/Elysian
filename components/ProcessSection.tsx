@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import { useState } from 'react'
 import {
   Accordion,
@@ -54,10 +53,10 @@ export default function ProcessSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-black dark:text-white">OUR</span>{' '}
+              <span className="text-gray-900 dark:text-white">OUR</span>{' '}
               <span className="text-[#3584C0]">PROCESS</span>
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
+            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
               How does collaborating with Elysian look like?
             </p>
 
@@ -70,11 +69,11 @@ export default function ProcessSection() {
                 >
                   <AccordionTrigger 
                     onClick={() => setActiveImage(index % 2)}
-                    className="hover:text-[#3584C0] hover:no-underline text-left py-4"
+                    className="hover:text-[#3584C0] hover:no-underline text-left py-4 text-gray-900 dark:text-gray-100"
                   >
                     <span className="text-lg font-medium">{step.title}</span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 dark:text-gray-400 py-4">
+                  <AccordionContent className="text-gray-700 dark:text-gray-300 py-4">
                     {step.content}
                   </AccordionContent>
                 </AccordionItem>
@@ -90,13 +89,7 @@ export default function ProcessSection() {
                   activeImage === index ? 'opacity-100' : 'opacity-0'
                 }`}
               >
-                <Image
-                  src={image}
-                  alt={`Process step illustration ${index + 1}`}
-                  fill
-                  className="object-contain"
-                  priority={index === 0}
-                />
+              
               </div>
             ))}
           </div>

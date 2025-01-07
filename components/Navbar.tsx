@@ -11,7 +11,6 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -155,7 +154,7 @@ export default function NavBar() {
                 height={80}
                 className="rounded-full"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#ffffff] to-[#6fabd8] bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#6fabd8] to-[#6fabd8] dark: bg-clip-text text-transparent">
                 ELYSIAN INNOVATIONS
               </span>
             </Link>
@@ -358,8 +357,8 @@ export default function NavBar() {
                 <MobileMenuItem title="COMPANY" items={company} />
                 <MobileMenuItem title="APPROACH" items={approach} />
                 <MobileMenuItem title="SERVICES & SOLUTIONS" items={[...services, ...solutions]} />
-                <MobileMenuItem title="INDUSTRIES" items={industries} />
-                <MobileMenuItem title="INSIGHTS" items={insights} />
+                {/* <MobileMenuItem title="INDUSTRIES" items={industries} />
+                <MobileMenuItem title="INSIGHTS" items={insights} /> */}
                 
                 <div className="pt-4">
                   <Button 

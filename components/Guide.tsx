@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import { useRef, useState, useEffect } from 'react'
@@ -123,7 +124,7 @@ export default function Guide() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.2 }}
         >
-          <Button>Start Exploring</Button>
+          <Button><a href='/who-we-are'>Start Exploring</a></Button>
         </motion.div>
       </div>
 
