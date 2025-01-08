@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
 import { useState, useEffect } from 'react'
@@ -41,7 +40,6 @@ const services = [
     href: "/services/app-modernization",
     icon: Settings,
   },
-  
   {
     title: "Cloud",
     href: "/services/cloud",
@@ -159,14 +157,14 @@ export default function NavBar() {
             transition={{ duration: 0.5 }}
           >
             <Link href="/" className="flex items-center space-x-2">
-            <Image
-                src="/Logo.png" // Replace with your actual logo path
+              <Image
+                src="/Logo.png"
                 alt="Elysian Innovations Logo"
                 width={80}
                 height={80}
                 className="rounded-full"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#6fabd8] to-[#6fabd8] dark: bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#6fabd8] to-[#6fabd8] bg-clip-text text-transparent">
                 ELYSIAN INNOVATIONS
               </span>
             </Link>
@@ -178,7 +176,7 @@ export default function NavBar() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0]"
+                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] text-gray-800 dark:text-gray-200"
                   >
                     COMPANY
                   </NavigationMenuTrigger>
@@ -203,7 +201,7 @@ export default function NavBar() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0]"
+                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] text-gray-800 dark:text-gray-200"
                   >
                     APPROACH
                   </NavigationMenuTrigger>
@@ -228,7 +226,7 @@ export default function NavBar() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0]"
+                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] text-gray-800 dark:text-gray-200"
                   >
                     SERVICES & SOLUTIONS
                   </NavigationMenuTrigger>
@@ -240,7 +238,7 @@ export default function NavBar() {
                       className="grid w-[600px] grid-cols-2 p-4 gap-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg"
                     >
                       <div>
-                        <h3 className="font-medium text-sm text-gray-500 dark:text-gray-400 mb-2 px-2">Services</h3>
+                        <h3 className="font-medium text-sm text-gray-800 dark:text-gray-400 mb-2 px-2">Services</h3>
                         <ul className="grid gap-2">
                           {services.map((item) => (
                             <ListItem
@@ -253,7 +251,7 @@ export default function NavBar() {
                         </ul>
                       </div>
                       <div>
-                        <h3 className="font-medium text-sm text-gray-500 dark:text-gray-400 mb-2 px-2">Solutions</h3>
+                        <h3 className="font-medium text-sm text-gray-800 dark:text-gray-400 mb-2 px-2">Solutions</h3>
                         <ul className="grid gap-2">
                           {solutions.map((item) => (
                             <ListItem
@@ -268,56 +266,6 @@ export default function NavBar() {
                     </motion.div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
-
-                {/* <NavigationMenuItem>
-                  <NavigationMenuTrigger 
-                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0]"
-                  >
-                    INDUSTRIES
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <motion.ul
-                      initial={{ opacity: 0, y: -5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="grid w-[200px] gap-2 p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg"
-                    >
-                      {industries.map((item) => (
-                        <ListItem
-                          key={item.title}
-                          title={item.title}
-                          href={item.href}
-                          icon={item.icon}
-                        />
-                      ))}
-                    </motion.ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem> */}
-
-                {/* <NavigationMenuItem>
-                  <NavigationMenuTrigger 
-                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0]"
-                  >
-                    INSIGHTS
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <motion.ul
-                      initial={{ opacity: 0, y: -5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="grid w-[200px] gap-2 p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg"
-                    >
-                      {insights.map((item) => (
-                        <ListItem
-                          key={item.title}
-                          title={item.title}
-                          href={item.href}
-                          icon={item.icon}
-                        />
-                      ))}
-                    </motion.ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem> */}
               </NavigationMenuList>
             </NavigationMenu>
           </div>
@@ -369,8 +317,6 @@ export default function NavBar() {
                 <MobileMenuItem title="COMPANY" items={company} />
                 <MobileMenuItem title="APPROACH" items={approach} />
                 <MobileMenuItem title="SERVICES & SOLUTIONS" items={[...services, ...solutions]} />
-                {/* <MobileMenuItem title="INDUSTRIES" items={industries} />
-                <MobileMenuItem title="INSIGHTS" items={insights} /> */}
                 
                 <div className="pt-4">
                   <Button 
@@ -389,11 +335,11 @@ export default function NavBar() {
   )
 }
 
-interface ListItemProps {
-  title: string
-  href: string
-  icon: React.ComponentType<{ className?: string }>
-}
+type ListItemProps = {
+  title: string;
+  href: string;
+  icon: React.ComponentType<{ className?: string }>;
+};
 
 function ListItem({ title, href, icon: Icon }: ListItemProps) {
   return (
@@ -406,7 +352,8 @@ function ListItem({ title, href, icon: Icon }: ListItemProps) {
           href={href}
           className={cn(
             "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
-            "flex items-center space-x-3 hover:bg-gray-100 dark:hover:bg-gray-800"
+            "flex items-center space-x-3 hover:bg-gray-100 dark:hover:bg-gray-800",
+            "text-gray-800 dark:text-gray-200"
           )}
         >
           <Icon className="h-5 w-5 text-[#3584C0]" />
@@ -417,10 +364,10 @@ function ListItem({ title, href, icon: Icon }: ListItemProps) {
   )
 }
 
-interface MobileMenuItemProps {
-  title: string
-  items: Array<{ title: string; href: string; icon: React.ComponentType<{ className?: string }> }>
-}
+type MobileMenuItemProps = {
+  title: string;
+  items: { title: string; href: string; icon: React.ComponentType<{ className?: string }> }[];
+};
 
 function MobileMenuItem({ title, items }: MobileMenuItemProps) {
   const [isOpen, setIsOpen] = useState(false)
