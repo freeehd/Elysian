@@ -176,7 +176,7 @@ export default function NavBar() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] text-gray-800 dark:text-gray-200"
+                    className="text-sm  transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] font-bold text-cyan-400 dark:text-gray-200"
                   >
                     COMPANY
                   </NavigationMenuTrigger>
@@ -201,7 +201,7 @@ export default function NavBar() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] text-gray-800 dark:text-gray-200"
+                    className="text-sm  transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] font-bold text-cyan-400 dark:text-gray-200"
                   >
                     APPROACH
                   </NavigationMenuTrigger>
@@ -226,7 +226,7 @@ export default function NavBar() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-sm font-medium transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] text-gray-800 dark:text-gray-200"
+                    className="text-sm  transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0]  font-bold text-cyan-400 dark:text-gray-200"
                   >
                     SERVICES & SOLUTIONS
                   </NavigationMenuTrigger>

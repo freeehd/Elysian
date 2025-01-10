@@ -18,7 +18,7 @@ const teamMembers = [
   },
   {
     name: "Zulfiqar Mehdi",
-    role: "Consultant",
+    role: "Director and CTO",
     bio: "Zulfiqar brings 30+ years of expertise in communication and IT, specializing in mobile network deployment, technology management, and innovative solution delivery.",
     expertise: ["Network Deployment", "IT Consulting", "Technology Management"]
   },
@@ -33,7 +33,46 @@ const teamMembers = [
       "AI Ethics",
       "Lawful Interception Systems"
     ]
-  }
+  },
+  {
+    name: "F.H. Malik",
+    role: "Director of Projects and Business Development",
+    bio: "F.H. Malik is a highly accomplished consultant with over 30 years of experience in business strategy, telecommunications, and technological innovation. With an MBA, MSc, a Bachelor's in Electronics, and Corporate Director certification, Malik excels at delivering transformative solutions for businesses seeking growth and efficiency in a tech-driven world.",
+    expertise: [
+      "Business Strategy",
+      "Telecommunications",
+      "Artificial Intelligence",
+      "International Operations",
+      "Corporate Governance"
+    ]
+  },
+  {
+    name: "Ovais Abbasi",
+    role: "Telecommunications Consultant",
+    bio: "Ovais Abbasi is a seasoned telecommunications professional with 30 years of expertise. He offers strategic guidance in spectrum acquisition & management, network planning, and regulatory compliance. His proven track record in project and program management, coupled with a deep understanding of risk and change management, enables him to assist organizations in successfully executing complex initiatives.",
+    expertise: [
+      "Spectrum Management",
+      "Network Planning",
+      "Regulatory Compliance",
+      "Project Management",
+      "Six Sigma",
+      "Electronic Warfare",
+      "Military Technology"
+    ]
+  },
+  {
+    name: "Sarim Ali",
+    role: "Solutions Architect",
+    bio: "Sarim Ali is a skilled Solutions Architect with expertise in client communication, environment elicitation, and full-stack development. With a strong background in creating tailored solutions, Sarim Ali excels in delivering outcomes that perfectly meet client needs. His passion for innovation and problem-solving drives his success in executing complex technical initiatives.",
+    expertise: [
+      "Full-Stack Development and Deployment",
+      "Cloud Development",
+      "Blockchain Technologies",
+      "International Operations",
+      "QA and Testing",
+      "Requirements Engineering"
+    ]
+  },
 ]
 
 const companyValues = [
