@@ -25,13 +25,15 @@ const teamMembers = [
   {
     name: "Rizwan Akhtar",
     role: "Director and COO",
-    bio: "With over 27 years of experience in telecommunications and IT, Rizwan is a passionate advocate for Pakistan's IT industry growth. He excels in strategic planning, program execution, and market entry strategies, fostering creativity and innovation through mentorship.",
+    bio: "Rizwan brings over 30 years of experience in the telecom and IT sectors, including previous C-Level roles. He is passionate about growing Pakistan's IT industry and increasing national IT exports. Rizwan holds an MS in Electrical Engg, an MS in Engg Management, and a BE in Telecom Engg, complemented by over 40 industry certifications. This strong academic foundation and his proven track record, supports his expertise in strategic planning, program execution, and market entry strategies.  A dedicated mentor, Rizwan fosters creativity and innovation within his team and through various mentorship roles for startups. ",
     expertise: [
-      "Tech Strategy Development",
-      "Project Management",
-      "ICT Policy Management",
-      "AI Ethics",
-      "Lawful Interception Systems"
+      "Tech Strategy Development & Implementation",
+      "Project Management & Operational Excellence",
+      "ICT Policy Management & Regulatory Frameworks",
+      "Ethical Considerations in AI Development",
+      "Lawful Interception System Architecture",
+      "Internet Governance",
+      "Team Leadership and Mentorship"
     ]
   },
   {

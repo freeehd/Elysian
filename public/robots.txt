@@ -1,0 +1,20 @@
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Allow: /
+
+# Disallow crawling of specific paths (uncomment if needed)
+# Disallow: /private/
+# Disallow: /admin/
+# Disallow: /temp/
+
+# Sitemap location
+Sitemap: https://www.elysian-innovations.com/sitemap.xml
+
+# Crawl-delay for specific bots (optional)
+# User-agent: Googlebot
+# Crawl-delay: 10
+
+# User-agent: Bingbot
+# Crawl-delay: 10
