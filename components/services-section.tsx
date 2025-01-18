@@ -70,18 +70,18 @@ export default function ServicesSection() {
           </div>
         </FadeInSection>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-fr">
           {services.map((service) => (
             <FadeInSection key={service.title}>
-              <div className="group bg-gray-50 dark:bg-gray-800 p-6 rounded-lg transition-all duration-300 hover:shadow-lg">
-                <div className="mb-4">
+              <div className="group bg-gray-50 dark:bg-gray-800 p-6 rounded-lg transition-all duration-300 hover:shadow-lg flex flex-col h-full">
+                <div className="mb-4 flex-grow">
                   <service.icon className="w-12 h-12 text-[#6fabd8] mb-4" />
                   <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">{service.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">{service.description}</p>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">{service.description}</p>
                 <Link 
                   href={service.href}
-                  className="text-[#3584C0] hover:text-[#6D28D9] dark:text-[#3584C0] dark:hover:text-[#C4B5FD] font-medium inline-flex items-center"
+                  className="text-[#3584C0] hover:text-[#6D28D9] dark:text-[#3584C0] dark:hover:text-[#C4B5FD] font-medium inline-flex items-center mt-auto"
                 >
                   Learn More
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">

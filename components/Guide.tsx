@@ -134,7 +134,6 @@ export default function Guide() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.8 }}
       >
-        <p className="text-sm mb-2">Scroll to discover more</p>
         <ChevronDown className="animate-bounce" size={24} />
       </motion.div>
     </section>

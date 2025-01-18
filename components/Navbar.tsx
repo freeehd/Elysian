@@ -17,116 +17,40 @@ import { cn } from "@/lib/utils"
 import { Users, User, Box, Cloud, Code2, Server, Settings, Database, BarChart, Building2, Network, Cpu, LineChart, BrainCircuit, BookOpen, Lightbulb, Menu, X, ChevronDown, BoltIcon } from 'lucide-react'
 
 const company = [
-  {
-    title: "Who We Are",
-    href: "/who-we-are",
-    icon: User,
-  },
-  {
-    title: "Our Team",
-    href: "/our-team",
-    icon: Users,
-  },
+  { title: "Who We Are", href: "/who-we-are", icon: User },
+  { title: "Our Team", href: "/our-team", icon: Users },
 ]
 
 const services = [
-  {
-    title: "API Development & Integration",
-    href: "/services/api-development",
-    icon: Box,
-  },
-  {
-    title: "Application Modernization",
-    href: "/services/app-modernization",
-    icon: Settings,
-  },
-  {
-    title: "Cloud",
-    href: "/services/cloud",
-    icon: Cloud,
-  },
-  {
-    title: "DevOps",
-    href: "/services/devops",
-    icon: BoltIcon,
-  },
-  {
-    title: "Software Development",
-    href: "/services/software-development",
-    icon: Code2,
-  },
-  {
-    title: "Infrastructure Solutions",
-    href: "/services/infrastructure",
-    icon: Server,
-  },
-  {
-    title: "Web and Application Development",
-    href: "/services/web-and-application-development",
-    icon: Code2,
-  },
-  {
-    title: "Managed Services",
-    href: "/services/managed-services",
-    icon: Settings,
-  }
+  { title: "API Development & Integration", href: "/services/api-development", icon: Box },
+  { title: "Application Modernization", href: "/services/app-modernization", icon: Settings },
+  { title: "Cloud", href: "/services/cloud", icon: Cloud },
+  { title: "DevOps", href: "/services/devops", icon: BoltIcon },
+  { title: "Software Development", href: "/services/software-development", icon: Code2 },
+  { title: "Infrastructure Solutions", href: "/services/infrastructure", icon: Server },
+  { title: "Web and Application Development", href: "/services/web-and-application-development", icon: Code2 },
+  { title: "Managed Services", href: "/services/managed-services", icon: Settings }
 ]
 
 const solutions = [
-  {
-    title: "Automation Solutions",
-    href: "/solutions/automation",
-    icon: Cpu,
-  },
-  {
-    title: "Datacenter Solutions",
-    href: "/solutions/datacenter",
-    icon: Database,
-  },
-  {
-    title: "Enterprise Resource Planning",
-    href: "/solutions/erp",
-    icon: BarChart,
-  },
+  { title: "Automation Solutions", href: "/solutions/automation", icon: Cpu },
+  { title: "Datacenter Solutions", href: "/solutions/datacenter", icon: Database },
+  { title: "Enterprise Resource Planning", href: "/solutions/erp", icon: BarChart },
 ]
 
 const approach = [
-  {
-    title: "Consulting",
-    href: "/consulting",
-    icon: Lightbulb,
-  },
-  {
-    title: "Strategy",
-    href: "/strategy",
-    icon: LineChart,
-  },
-  {
-    title: "Transformation",
-    href: "/transformation",
-    icon: BrainCircuit,
-  },
+  { title: "Consulting", href: "/consulting", icon: Lightbulb },
+  { title: "Strategy", href: "/strategy", icon: LineChart },
+  { title: "Transformation", href: "/transformation", icon: BrainCircuit },
 ]
 
 const industries = [
-  {
-    title: "Manufacturing",
-    href: "/industries/manufacturing",
-    icon: Building2,
-  },
-  {
-    title: "Technology",
-    href: "/industries/technology",
-    icon: Network,
-  },
+  { title: "Manufacturing", href: "/industries/manufacturing", icon: Building2 },
+  { title: "Technology", href: "/industries/technology", icon: Network },
 ]
 
 const insights = [
-  {
-    title: "Blog",
-    href: "/blog",
-    icon: BookOpen,
-  },
+  { title: "Blog", href: "/blog", icon: BookOpen },
 ]
 
 export default function NavBar() {
@@ -145,9 +69,8 @@ export default function NavBar() {
   return (
     <header className={cn(
       "fixed top-0 w-full z-50 transition-all duration-300",
-      isScrolled 
-        ? "bg-white/90 backdrop-blur-md dark:bg-gray-900/90 shadow-lg" 
-        : "bg-transparent"
+      "bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg",
+      isScrolled ? "shadow-lg" : ""
     )}>
       <div className="max-w-full mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
@@ -176,7 +99,7 @@ export default function NavBar() {
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-sm  transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] font-bold text-cyan-400 dark:text-gray-200"
+                    className="text-sm transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] font-bold text-gray-800 dark:text-gray-200"
                   >
                     COMPANY
                   </NavigationMenuTrigger>
@@ -185,7 +108,7 @@ export default function NavBar() {
                       initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="grid w-[200px] gap-2 p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg"
+                      className="grid w-[200px] gap-2 p-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg shadow-lg"
                     >
                       {company.map((item) => (
                         <ListItem
@@ -201,7 +124,7 @@ export default function NavBar() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-sm  transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] font-bold text-cyan-400 dark:text-gray-200"
+                    className="text-sm transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] font-bold text-gray-800 dark:text-gray-200"
                   >
                     APPROACH
                   </NavigationMenuTrigger>
@@ -210,7 +133,7 @@ export default function NavBar() {
                       initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="grid w-[200px] gap-2 p-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg"
+                      className="grid w-[200px] gap-2 p-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg shadow-lg"
                     >
                       {approach.map((item) => (
                         <ListItem
@@ -226,7 +149,7 @@ export default function NavBar() {
 
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
-                    className="text-sm  transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0]  font-bold text-cyan-400 dark:text-gray-200"
+                    className="text-sm transition-colors hover:text-[#3584C0] data-[state=open]:text-[#3584C0] font-bold text-gray-800 dark:text-gray-200"
                   >
                     SERVICES & SOLUTIONS
                   </NavigationMenuTrigger>
@@ -235,7 +158,7 @@ export default function NavBar() {
                       initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="grid w-[600px] grid-cols-2 p-4 gap-4 bg-white dark:bg-gray-900 rounded-lg shadow-lg"
+                      className="grid w-[600px] grid-cols-2 p-4 gap-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg shadow-lg"
                     >
                       <div>
                         <h3 className="font-medium text-sm text-gray-800 dark:text-gray-400 mb-2 px-2">Services</h3>
@@ -310,10 +233,9 @@ export default function NavBar() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white dark:bg-gray-900 rounded-lg shadow-lg"
+              className="lg:hidden bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg shadow-lg"
             >
               <div className="py-4 space-y-4">
-                {/* Mobile menu items */}
                 <MobileMenuItem title="COMPANY" items={company} />
                 <MobileMenuItem title="APPROACH" items={approach} />
                 <MobileMenuItem title="SERVICES & SOLUTIONS" items={[...services, ...solutions]} />

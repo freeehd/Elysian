@@ -12,14 +12,9 @@ export default function Home() {
       <Guide />
       <div id="next-section"></div>
      <Services/>
-      <div className="pb-5"></div>
-      <Spacer/>
       <ServicesSection/>
-      <Spacer/>
       <SolutionsSection/>
-      <Spacer/>
       <TechnologyExpertise/>
-      <Spacer/>
       <ProcessSection/>
     </>
   )
