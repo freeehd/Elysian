@@ -1,36 +1,36 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { FadeInSection } from './FadeInSection'
+import Image from "next/image";
+import { FadeInSection } from "./FadeInSection";
 
 const technologies = [
   // Row 1
-  { name: '.NET', logo: '/images/tech/dotnet.svg' },
-  { name: 'Node.js', logo: '/images/tech/nodejs.svg' },
-  { name: 'React', logo: '/images/tech/react.svg' },
-  { name: 'Angular', logo: '/images/tech/angular.svg' },
-  { name: 'Python', logo: '/images/tech/python.svg' },
-  { name: 'Laravel', logo: '/images/tech/laravel.svg' },
-  { name: 'Java', logo: '/images/tech/java.svg' },
-  
+  { name: ".NET", logo: "/images/tech/dotnet.svg" },
+  { name: "Node.js", logo: "/images/tech/nodejs.svg" },
+  { name: "React", logo: "/images/tech/react.svg" },
+  { name: "Angular", logo: "/images/tech/angular.svg" },
+  { name: "Python", logo: "/images/tech/python.svg" },
+  { name: "Laravel", logo: "/images/tech/laravel.svg" },
+  { name: "Java", logo: "/images/tech/java.svg" },
+
   // Row 2
-  { name: 'PostgreSQL', logo: '/images/tech/postgresql.svg' },
-  { name: 'SQL Server', logo: '/images/tech/sqlserver.svg' },
-  { name: 'MongoDB', logo: '/images/tech/mongodb.svg' },
-  { name: 'MariaDB', logo: '/images/tech/mariadb.svg' },
-  { name: 'Oracle', logo: '/images/tech/oracle.svg' },
-  { name: 'MySQL', logo: '/images/tech/mysql.svg' },
-  { name: 'AWS', logo: '/images/tech/aws.svg' },
-  
+  { name: "PostgreSQL", logo: "/images/tech/postgresql.svg" },
+  { name: "SQL Server", logo: "/images/tech/sqlserver.svg" },
+  { name: "MongoDB", logo: "/images/tech/mongodb.svg" },
+  { name: "MariaDB", logo: "/images/tech/mariadb.svg" },
+  { name: "Oracle", logo: "/images/tech/oracle.svg" },
+  { name: "MySQL", logo: "/images/tech/mysql.svg" },
+  { name: "AWS", logo: "/images/tech/aws.svg" },
+
   // Row 3
-  { name: 'Azure', logo: '/images/tech/azure.svg' },
-  { name: 'Google Cloud', logo: '/images/tech/gcloud.svg' },
-  { name: 'Terraform', logo: '/images/tech/terraform.svg' },
-  { name: 'Jira', logo: '/images/tech/jira.svg' },
-  { name: 'HashiCorp', logo: '/images/tech/hashicorp.svg' },
-  { name: 'Adobe', logo: '/images/tech/adobe.svg' },
-  { name: 'Figma', logo: '/images/tech/figma.svg' },
-]
+  { name: "Azure", logo: "/images/tech/azure.svg" },
+  { name: "Google Cloud", logo: "/images/tech/gcloud.svg" },
+  { name: "Terraform", logo: "/images/tech/terraform.svg" },
+  { name: "Jira", logo: "/images/tech/jira.svg" },
+  { name: "HashiCorp", logo: "/images/tech/hashicorp.svg" },
+  { name: "Adobe", logo: "/images/tech/adobe.svg" },
+  { name: "Figma", logo: "/images/tech/figma.svg" },
+];
 
 export default function TechnologyExpertise() {
   return (
@@ -39,12 +39,12 @@ export default function TechnologyExpertise() {
         <FadeInSection>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              <span className="text-black dark:text-white">Technology</span>{' '}
-              <span className="text-[#3584C0]">Expertise</span>
+              <span className="text-black dark:text-white">Technology</span>{" "}
+              <span className="text-[#008080]">Expertise</span>
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Our skilled team is dedicated to leveraging the latest technologies 
-              to deliver exceptional results.
+              Our skilled team is dedicated to leveraging the latest
+              technologies to deliver exceptional results.
             </p>
           </div>
         </FadeInSection>
@@ -72,6 +72,5 @@ export default function TechnologyExpertise() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

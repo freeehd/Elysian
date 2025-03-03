@@ -8,14 +8,13 @@ import ProcessSection from "@/components/ProcessSection";
 export default function Home() {
   return (
     <>
-      
       <Guide />
       <div id="next-section"></div>
-     <Services/>
-      <ServicesSection/>
-      <SolutionsSection/>
-      <TechnologyExpertise/>
-      <ProcessSection/>
+      <Services />
+      <ServicesSection />
+      <SolutionsSection />
+      <TechnologyExpertise />
+      <ProcessSection />
     </>
-  )
+  );
 }

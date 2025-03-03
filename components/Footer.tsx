@@ -1,20 +1,20 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import Image from 'next/image'
-import { motion } from 'framer-motion'
-import { Facebook, Linkedin, Instagram } from 'lucide-react'
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Facebook, Linkedin, Instagram } from "lucide-react";
 
 const company = [
   { title: "Who We Are", href: "/who-we-are" },
   { title: "Our Team", href: "/our-team" },
-]
+];
 
 const approach = [
   { title: "Consulting", href: "/consulting" },
   { title: "Strategy", href: "/strategy" },
   { title: "Transformation", href: "/transformation" },
-]
+];
 
 const services = [
   { title: "API Development & Integration", href: "/services/api-development" },
@@ -23,29 +23,39 @@ const services = [
   { title: "Cloud", href: "/services/cloud" },
   { title: "Software Development", href: "/services/software-development" },
   { title: "Infrastructure Solutions", href: "/services/infrastructure" },
-  { title: "Web and Application Development", href: "/services/web-and-application-development" },
+  {
+    title: "Web and Application Development",
+    href: "/services/web-and-application-development",
+  },
   { title: "Managed Services", href: "/services/managed-services" },
-]
+];
 
 const solutions = [
   { title: "Automation Solutions", href: "/solutions/automation" },
   { title: "Datacenter Solutions", href: "/solutions/datacenter" },
   { title: "Enterprise Resource Planning", href: "/solutions/erp" },
-  { title: "Business Process Management", href: "/solutions/business-process-management" },
-  { title: "Robotic Process Automation", href: "/solutions/robotic-process-automation" },
-]
+  {
+    title: "Business Process Management",
+    href: "/solutions/business-process-management",
+  },
+  {
+    title: "Robotic Process Automation",
+    href: "/solutions/robotic-process-automation",
+  },
+];
 
 const industries = [
-  { title: "Banking & Financial Services", href: "/industries/banking-and-financial-services" },
+  {
+    title: "Banking & Financial Services",
+    href: "/industries/banking-and-financial-services",
+  },
   { title: "Oil & Gas", href: "/industries/oil-and-gas" },
   { title: "Public Sector", href: "/industries/public-sector" },
   { title: "Small & Medium Enterprise", href: "/industries/sme" },
   { title: "Telecommunication", href: "/industries/telecommunication" },
-]
+];
 
-const insights = [
-  { title: "Blog", href: "/blog" },
-]
+const insights = [{ title: "Blog", href: "/blog" }];
 
 export default function Footer() {
   return (
@@ -69,10 +79,7 @@ export default function Footer() {
             <p className="text-gray-400 mb-4">
               Transforming businesses through innovative technology solutions
             </p>
-            <div className="flex space-x-4">
-              
-               
-            </div>
+            <div className="flex space-x-4"></div>
           </div>
 
           {/* Quick Links */}
@@ -81,7 +88,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {company.map((item) => (
                 <li key={item.title}>
-                  <Link href={item.href} className="text-gray-400 hover:text-[#3584C0] transition-colors">
+                  <Link
+                    href={item.href}
+                    className="text-gray-400 hover:text-[#3584C0] transition-colors"
+                  >
                     {item.title}
                   </Link>
                 </li>
@@ -91,7 +101,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {approach.map((item) => (
                 <li key={item.title}>
-                  <Link href={item.href} className="text-gray-400 hover:text-[#3584C0] transition-colors">
+                  <Link
+                    href={item.href}
+                    className="text-gray-400 hover:text-[#3584C0] transition-colors"
+                  >
                     {item.title}
                   </Link>
                 </li>
@@ -104,7 +117,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {services.map((item) => (
                 <li key={item.title}>
-                  <Link href={item.href} className="text-gray-400 hover:text-[#3584C0] transition-colors">
+                  <Link
+                    href={item.href}
+                    className="text-gray-400 hover:text-[#3584C0] transition-colors"
+                  >
                     {item.title}
                   </Link>
                 </li>
@@ -117,7 +133,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {solutions.map((item) => (
                 <li key={item.title}>
-                  <Link href={item.href} className="text-gray-400 hover:text-[#3584C0] transition-colors">
+                  <Link
+                    href={item.href}
+                    className="text-gray-400 hover:text-[#3584C0] transition-colors"
+                  >
                     {item.title}
                   </Link>
                 </li>
@@ -153,13 +172,20 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {new Date().getFullYear()} Elysian Innovations. All rights reserved.
+              © {new Date().getFullYear()} Elysian Innovations. All rights
+              reserved.
             </div>
             <div className="flex space-x-6">
-              <Link href="/privacy-policy" className="text-gray-400 hover:text-[#3584C0] text-sm">
+              <Link
+                href="/privacy-policy"
+                className="text-gray-400 hover:text-[#3584C0] text-sm"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-[#3584C0] text-sm">
+              <Link
+                href="/terms"
+                className="text-gray-400 hover:text-[#3584C0] text-sm"
+              >
                 Terms & Conditions
               </Link>
             </div>
@@ -167,6 +193,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
-

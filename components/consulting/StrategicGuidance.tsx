@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { FadeInSection } from "../FadeInSection"
-import { Card, CardContent } from "@/components/ui/card"
+import { FadeInSection } from "../FadeInSection";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function StrategicGuidance() {
   return (
@@ -13,8 +13,8 @@ export function StrategicGuidance() {
               <div className="absolute -left-4 -top-4 w-72 h-72 bg-purple-600/10 rounded-full blur-3xl" />
               <Card className="relative overflow-hidden">
                 <CardContent className="p-0">
-                  <img 
-                    src="/logo.png?height=400&width=600" 
+                  <img
+                    src="/logo.png?height=400&width=600"
                     alt="Strategic consulting session"
                     className="w-full h-auto rounded-lg"
                   />
@@ -30,19 +30,24 @@ export function StrategicGuidance() {
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-[#3584C0] mb-2">
+                  <h3 className="text-xl font-semibold text-[#008080] mb-2">
                     Introduction
                   </h3>
                   <p className="text-gray-600 text-lg">
-                    At Elysian Innovations, our consulting services empower your organization with customized strategies and expert guidance, tailored to your unique needs and challenges.
+                    At Elysian Innovations, our consulting services empower your
+                    organization with customized strategies and expert guidance,
+                    tailored to your unique needs and challenges.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#3584C0] mb-2">
+                  <h3 className="text-xl font-semibold text-[#008080] mb-2">
                     Our Consulting Approach
                   </h3>
                   <p className="text-gray-600 text-lg">
-                    We build hands-on partnerships that tackle immediate challenges while fostering long-term growth and success. Our collaborative and transparent approach focuses on achieving your strategic objectives.
+                    We build hands-on partnerships that tackle immediate
+                    challenges while fostering long-term growth and success. Our
+                    collaborative and transparent approach focuses on achieving
+                    your strategic objectives.
                   </p>
                 </div>
               </div>
@@ -51,6 +56,5 @@ export function StrategicGuidance() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

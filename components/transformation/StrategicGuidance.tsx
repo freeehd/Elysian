@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { FadeInSection } from "../FadeInSection"
-import { Card, CardContent } from "@/components/ui/card"
+import { FadeInSection } from "../FadeInSection";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function StrategicGuidance() {
   return (
@@ -13,8 +13,8 @@ export function StrategicGuidance() {
               <div className="absolute -left-4 -top-4 w-72 h-72 bg-purple-600/10 rounded-full blur-3xl" />
               <Card className="relative overflow-hidden">
                 <CardContent className="p-0">
-                  <img 
-                    src="/logo.png?height=400&width=600" 
+                  <img
+                    src="/logo.png?height=400&width=600"
                     alt="Digital transformation visualization"
                     className="w-full h-auto rounded-lg"
                   />
@@ -30,19 +30,25 @@ export function StrategicGuidance() {
               </h2>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-[#3584C0] mb-2">
+                  <h3 className="text-xl font-semibold text-[#008080] mb-2">
                     Introduction
                   </h3>
                   <p className="text-gray-600 text-lg">
-                    At Elysian Innovations, we offer a comprehensive suite of transformation services and strategic partnerships with industry leaders to help our clients fully leverage the benefits of their transformation efforts.
+                    At Elysian Innovations, we offer a comprehensive suite of
+                    transformation services and strategic partnerships with
+                    industry leaders to help our clients fully leverage the
+                    benefits of their transformation efforts.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#3584C0] mb-2">
+                  <h3 className="text-xl font-semibold text-[#008080] mb-2">
                     Our Transformation Approach
                   </h3>
                   <p className="text-gray-600 text-lg">
-                    Our approach to digital transformation is holistic and client-focused. Recognizing that every business is unique, we tailor our solutions to meet your specific needs by combining advanced technologies with strategic planning.
+                    Our approach to digital transformation is holistic and
+                    client-focused. Recognizing that every business is unique,
+                    we tailor our solutions to meet your specific needs by
+                    combining advanced technologies with strategic planning.
                   </p>
                 </div>
               </div>
@@ -51,6 +57,5 @@ export function StrategicGuidance() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-
