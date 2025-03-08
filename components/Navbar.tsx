@@ -1,9 +1,11 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import type React from "react"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -11,9 +13,10 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+} from "@/components/ui/navigation-menu"
+import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
+import { ThemeToggle } from "@/components/theme-toggle"
 import {
   Users,
   User,
@@ -35,12 +38,12 @@ import {
   X,
   ChevronDown,
   BoltIcon,
-} from "lucide-react";
+} from "lucide-react"
 
 const company = [
   { title: "Who We Are", href: "/who-we-are", icon: User },
   { title: "Our Team", href: "/our-team", icon: Users },
-];
+]
 
 const services = [
   {
@@ -75,7 +78,7 @@ const services = [
     href: "/services/managed-services",
     icon: Settings,
   },
-];
+]
 
 const solutions = [
   { title: "Automation Solutions", href: "/solutions/automation", icon: Cpu },
@@ -89,13 +92,13 @@ const solutions = [
     href: "/solutions/erp",
     icon: BarChart,
   },
-];
+]
 
 const approach = [
   { title: "Consulting", href: "/consulting", icon: Lightbulb },
   { title: "Strategy", href: "/strategy", icon: LineChart },
   { title: "Transformation", href: "/transformation", icon: BrainCircuit },
-];
+]
 
 const industries = [
   {
@@ -104,47 +107,37 @@ const industries = [
     icon: Building2,
   },
   { title: "Technology", href: "/industries/technology", icon: Network },
-];
+]
 
-const insights = [{ title: "Blog", href: "/blog", icon: BookOpen }];
+const insights = [{ title: "Blog", href: "/blog", icon: BookOpen }]
 
 export default function NavBar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
+      setIsScrolled(window.scrollY > 10)
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
     <header
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
-        "bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg",
-        isScrolled ? "shadow-lg" : ""
+        "bg-white/70 dark:bg-rich-black-100/70 backdrop-blur-lg",
+        isScrolled ? "shadow-lg" : "",
       )}
     >
       <div className="max-w-full mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-4">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
             <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/Logo.png"
-                alt="Elysian Innovations Logo"
-                width={80}
-                height={80}
-                className=""
-              />
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#00CCCC] to-[#00CCCC] bg-clip-text text-transparent">
+              <Image src="/Logo.png" alt="Elysian Innovations Logo" width={80} height={80} className="" />
+              <span className="text-2xl font-bold bg-gradient-to-r from-teal to-caribbean bg-clip-text text-transparent">
                 ELYSIAN INNOVATIONS
               </span>
             </Link>
@@ -155,7 +148,7 @@ export default function NavBar() {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm transition-colors hover:text-[#008080] data-[state=open]:text-[#008080] font-bold text-gray-800 dark:text-gray-200">
+                  <NavigationMenuTrigger className="text-sm transition-colors hover:text-teal data-[state=open]:text-teal font-bold text-gray-800 dark:text-gray-200">
                     COMPANY
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -163,22 +156,17 @@ export default function NavBar() {
                       initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="grid w-[200px] gap-2 p-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg shadow-lg"
+                      className="grid w-[200px] gap-2 p-4 bg-white/90 dark:bg-rich-black-200/90 backdrop-blur-md rounded-lg shadow-lg"
                     >
                       {company.map((item) => (
-                        <ListItem
-                          key={item.title}
-                          title={item.title}
-                          href={item.href}
-                          icon={item.icon}
-                        />
+                        <ListItem key={item.title} title={item.title} href={item.href} icon={item.icon} />
                       ))}
                     </motion.ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm transition-colors hover:text-[#008080] data-[state=open]:text-[#008080] font-bold text-gray-800 dark:text-gray-200">
+                  <NavigationMenuTrigger className="text-sm transition-colors hover:text-teal data-[state=open]:text-teal font-bold text-gray-800 dark:text-gray-200">
                     APPROACH
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -186,22 +174,17 @@ export default function NavBar() {
                       initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="grid w-[200px] gap-2 p-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg shadow-lg"
+                      className="grid w-[200px] gap-2 p-4 bg-white/90 dark:bg-rich-black-200/90 backdrop-blur-md rounded-lg shadow-lg"
                     >
                       {approach.map((item) => (
-                        <ListItem
-                          key={item.title}
-                          title={item.title}
-                          href={item.href}
-                          icon={item.icon}
-                        />
+                        <ListItem key={item.title} title={item.title} href={item.href} icon={item.icon} />
                       ))}
                     </motion.ul>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm transition-colors hover:text-[#008080] data-[state=open]:text-[#008080] font-bold text-gray-800 dark:text-gray-200">
+                  <NavigationMenuTrigger className="text-sm transition-colors hover:text-teal data-[state=open]:text-teal font-bold text-gray-800 dark:text-gray-200">
                     SERVICES & SOLUTIONS
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -209,35 +192,21 @@ export default function NavBar() {
                       initial={{ opacity: 0, y: -5 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="grid w-[600px] grid-cols-2 p-4 gap-4 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg shadow-lg"
+                      className="grid w-[600px] grid-cols-2 p-4 gap-4 bg-white/90 dark:bg-rich-black-200/90 backdrop-blur-md rounded-lg shadow-lg"
                     >
                       <div>
-                        <h3 className="font-medium text-sm text-gray-800 dark:text-gray-400 mb-2 px-2">
-                          Services
-                        </h3>
+                        <h3 className="font-medium text-sm text-gray-800 dark:text-gray-400 mb-2 px-2">Services</h3>
                         <ul className="grid gap-2">
                           {services.map((item) => (
-                            <ListItem
-                              key={item.title}
-                              title={item.title}
-                              href={item.href}
-                              icon={item.icon}
-                            />
+                            <ListItem key={item.title} title={item.title} href={item.href} icon={item.icon} />
                           ))}
                         </ul>
                       </div>
                       <div>
-                        <h3 className="font-medium text-sm text-gray-800 dark:text-gray-400 mb-2 px-2">
-                          Solutions
-                        </h3>
+                        <h3 className="font-medium text-sm text-gray-800 dark:text-gray-400 mb-2 px-2">Solutions</h3>
                         <ul className="grid gap-2">
                           {solutions.map((item) => (
-                            <ListItem
-                              key={item.title}
-                              title={item.title}
-                              href={item.href}
-                              icon={item.icon}
-                            />
+                            <ListItem key={item.title} title={item.title} href={item.href} icon={item.icon} />
                           ))}
                         </ul>
                       </div>
@@ -248,20 +217,20 @@ export default function NavBar() {
             </NavigationMenu>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 dark:text-gray-300"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </Button>
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+
+            <div className="lg:hidden">
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="text-gray-700 dark:text-gray-300"
+              >
+                {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              </Button>
+            </div>
           </div>
 
           {/* Contact Button */}
@@ -273,7 +242,7 @@ export default function NavBar() {
           >
             <Button
               asChild
-              className="bg-[#008080] hover:bg-[#2d6fa3] text-white transition-all duration-300 hover:scale-105"
+              className="bg-teal hover:bg-caribbean text-white transition-all duration-300 hover:scale-105"
             >
               <Link href="/contact-us">Contact Us</Link>
             </Button>
@@ -288,21 +257,15 @@ export default function NavBar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white/90 dark:bg-gray-900/90 backdrop-blur-md rounded-lg shadow-lg"
+              className="lg:hidden bg-white/90 dark:bg-rich-black-200/90 backdrop-blur-md rounded-lg shadow-lg"
             >
               <div className="py-4 space-y-4">
                 <MobileMenuItem title="COMPANY" items={company} />
                 <MobileMenuItem title="APPROACH" items={approach} />
-                <MobileMenuItem
-                  title="SERVICES & SOLUTIONS"
-                  items={[...services, ...solutions]}
-                />
+                <MobileMenuItem title="SERVICES & SOLUTIONS" items={[...services, ...solutions]} />
 
                 <div className="pt-4">
-                  <Button
-                    asChild
-                    className="w-full bg-[#008080] hover:bg-[#2d6fa3] text-white"
-                  >
+                  <Button asChild className="w-full bg-teal hover:bg-caribbean text-white">
                     <Link href="/contact">Contact Us</Link>
                   </Button>
                 </div>
@@ -312,14 +275,14 @@ export default function NavBar() {
         </AnimatePresence>
       </div>
     </header>
-  );
+  )
 }
 
 type ListItemProps = {
-  title: string;
-  href: string;
-  icon: React.ComponentType<{ className?: string }>;
-};
+  title: string
+  href: string
+  icon: React.ComponentType<{ className?: string }>
+}
 
 function ListItem({ title, href, icon: Icon }: ListItemProps) {
   return (
@@ -329,29 +292,29 @@ function ListItem({ title, href, icon: Icon }: ListItemProps) {
           href={href}
           className={cn(
             "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
-            "flex items-center space-x-3 hover:bg-gray-100 dark:hover:bg-gray-800",
-            "text-gray-800 dark:text-gray-200"
+            "flex items-center space-x-3 hover:bg-gray-100 dark:hover:bg-rich-black-300",
+            "text-gray-800 dark:text-gray-200",
           )}
         >
-          <Icon className="h-5 w-5 text-[#008080]" />
+          <Icon className="h-5 w-5 text-teal dark:text-caribbean" />
           <span className="font-medium">{title}</span>
         </Link>
       </NavigationMenuLink>
     </motion.li>
-  );
+  )
 }
 
 type MobileMenuItemProps = {
-  title: string;
+  title: string
   items: {
-    title: string;
-    href: string;
-    icon: React.ComponentType<{ className?: string }>;
-  }[];
-};
+    title: string
+    href: string
+    icon: React.ComponentType<{ className?: string }>
+  }[]
+}
 
 function MobileMenuItem({ title, items }: MobileMenuItemProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div>
@@ -360,10 +323,7 @@ function MobileMenuItem({ title, items }: MobileMenuItemProps) {
         className="w-full flex items-center justify-between px-4 py-2 text-sm font-medium text-gray-900 dark:text-gray-100"
       >
         {title}
-        <motion.div
-          animate={{ rotate: isOpen ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-        >
+        <motion.div animate={{ rotate: isOpen ? 180 : 0 }} transition={{ duration: 0.2 }}>
           <ChevronDown className="h-4 w-4" />
         </motion.div>
       </button>
@@ -380,7 +340,7 @@ function MobileMenuItem({ title, items }: MobileMenuItemProps) {
                 <Link
                   key={item.title}
                   href={item.href}
-                  className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-[#008080] dark:hover:text-[#6fabd8] rounded-md transition-colors"
+                  className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-teal dark:hover:text-caribbean rounded-md transition-colors"
                 >
                   <item.icon className="h-4 w-4" />
                   <span>{item.title}</span>
@@ -391,5 +351,6 @@ function MobileMenuItem({ title, items }: MobileMenuItemProps) {
         )}
       </AnimatePresence>
     </div>
-  );
+  )
 }
+

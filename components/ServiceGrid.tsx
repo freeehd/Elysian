@@ -1,130 +1,119 @@
-"use client";
+"use client"
 
-import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
-import { BarChart, Layout, CircleIcon, Rocket } from "lucide-react";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
+import { BarChartIcon, LayoutIcon, LoopIcon, RocketIcon } from "@radix-ui/react-icons"
+import Image from "next/image"
+import { useState } from "react"
+import SpotlightCard from "./ui/SpotlightCard"
 
 const services = [
   {
     name: "Strategic Consulting",
-    Icon: BarChart,
+    Icon: BarChartIcon,
     description:
       "Our expert consultants analyze your unique challenges, developing tailored solutions to boost efficiency and drive growth.",
     href: "/consulting",
     cta: "Learn More",
-    className: "md:col-span-1 md:row-span-1",
     image: "/images/service/1.png",
   },
   {
     name: "Future-Proof Strategy",
-    Icon: Layout,
+    Icon: LayoutIcon,
     description:
       "Navigate change with our data-driven strategies. We help you craft a robust vision aligned with your goals.",
     href: "/strategy",
     cta: "Explore Strategy",
-    className: "md:col-span-1 md:row-span-1",
     image: "/images/service/2.png",
   },
   {
     name: "Digital Transformation",
-    Icon: CircleIcon,
+    Icon: LoopIcon,
     description:
       "Reimagine your business for the digital age. We integrate people, processes, and technology seamlessly.",
     href: "/transformation",
     cta: "Transform Now",
-    className: "md:col-span-1 md:row-span-1",
     image: "/images/service/3.png",
   },
   {
     name: "Innovation Consulting",
-    Icon: Rocket,
+    Icon: RocketIcon,
     description:
       "Strategic innovation consulting to help your business stay ahead in the rapidly evolving technological landscape.",
     href: "/consulting",
     cta: "Innovate Today",
-    className: "md:col-span-1 md:row-span-1",
     image: "/images/service/4.png",
   },
-];
+]
 
 export default function ServicesGrid() {
   return (
-    <section className="py-24 px-4 md:px-6 lg:px-8 bg-[#1f2d4e]">
+    <section className="py-12 px-4 md:px-6 lg:px-8 bg-rich-black-100 dark:bg-rich-black-200">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-6">
-            <span className="text-white">THE </span>
-            <span className="text-[#64A5DC]">ELYSIAN </span>
-            <span className="text-white">PROCESS </span>
-          </h2>
-          <p className="text-white/80 text-xl max-w-3xl mx-auto leading-relaxed">
-            Leveraging advanced technologies and industry expertise, we deliver
-            comprehensive solutions designed to accelerate innovation and drive
-            sustainable growth.
-          </p>
-        </div>
-        <BentoGrid className="grid-cols-1 md:grid-cols-2 gap-6 md:auto-rows-[400px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service) => (
-            <BentoCard
-              key={service.name}
-              className={cn(
-                service.className,
-                "p-0 transition-all duration-300 overflow-hidden group"
-              )}
-            >
-              <div className="relative h-full flex flex-col">
-                <div className="relative h-1/2 overflow-hidden">
-                  <Image
-                    src={service.image || "/placeholder.svg"}
-                    alt={service.name}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/10" />
+            <SpotlightCard key={service.name} className="h-full" spotlightColor="rgba(0, 128, 128, 0.2)">
+              <div className="flex flex-col h-full">
+                <div className="relative h-48 w-full mb-6 rounded-xl overflow-hidden">
+                  <ServiceImage src={service.image} alt={service.name} />
                 </div>
-                <div className="relative p-6 flex flex-col justify-between flex-grow bg-white">
-                  <div className="z-10">
-                    <service.Icon
-                      className="w-8 h-8 text-gray-900 mb-4"
-                      strokeWidth={1.5}
-                    />
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {service.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 mb-4">
-                      {service.description}
-                    </p>
+                <div className="flex-grow flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center mb-4">
+                      <service.Icon className="w-6 h-6 text-teal mr-2" />
+                      <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{service.name}</h3>
+                    </div>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{service.description}</p>
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-white transform translate-y-full transition-transform duration-300 group-hover:translate-y-0 border-t">
-                    <a
-                      href={service.href}
-                      className="inline-flex items-center text-sm font-medium text-gray-900 hover:text-gray-700"
+                  <a
+                    href={service.href}
+                    className="inline-flex items-center text-sm font-medium text-teal hover:text-caribbean transition-colors relative z-10"
+                  >
+                    {service.cta}
+                    <svg
+                      className="ml-2 w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      {service.cta}
-                      <svg
-                        className="ml-2 w-4 h-4"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M9 5l7 7-7 7"
-                        />
-                      </svg>
-                    </a>
-                  </div>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
-            </BentoCard>
+            </SpotlightCard>
           ))}
-        </BentoGrid>
+        </div>
       </div>
     </section>
-  );
+  )
 }
+
+function ServiceImage({ src, alt }: { src: string; alt: string }) {
+  const [error, setError] = useState(false)
+
+  if (error) {
+    return (
+      <div className="absolute inset-0 bg-grey-800 dark:bg-rich-black-300 flex items-center justify-center">
+        <span className="text-grey-500 dark:text-grey-400">Image not available</span>
+      </div>
+    )
+  }
+
+  return (
+    <>
+      {/* Next.js Image (primary approach) */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={src || "/placeholder.svg"}
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{ objectFit: "cover" }}
+          className="transition-transform duration-500 hover:scale-110"
+          onError={() => setError(true)}
+        />
+      </div>
+    </>
+  )
+}
+

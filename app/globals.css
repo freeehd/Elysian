@@ -7,6 +7,11 @@
   --background-rgb: 255, 255, 255;
 }
 
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 10, 26, 26; /* Rich black with teal undertone */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
@@ -19,7 +24,7 @@ body {
 
   .nav-link::before,
   .nav-link::after {
-    @apply content-[''] absolute w-0 h-0.5 bottom-0 bg-arcana-purple transition-all duration-300 ease-in-out;
+    @apply content-[''] absolute w-0 h-0.5 bottom-0 bg-teal transition-all duration-300 ease-in-out;
   }
 
   .nav-link::before {
@@ -70,7 +75,7 @@ body {
   }
 
   .nav-item-hover::after {
-    @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-[#008080] transform scale-x-0 transition-transform duration-300 origin-center;
+    @apply content-[''] absolute bottom-0 left-0 w-full h-0.5 bg-teal transform scale-x-0 transition-transform duration-300 origin-center;
   }
 
   .nav-item-hover:hover::after {
@@ -114,3 +119,12 @@ body {
   height: 2px;
   background-color: #008080;
 }
+
+.dark .NavigationMenuTrigger[data-state="open"] {
+  color: #66b2b2;
+}
+
+.dark .NavigationMenuTrigger[data-state="open"]::after {
+  background-color: #66b2b2;
+}
+
