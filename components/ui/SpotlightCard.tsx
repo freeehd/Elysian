@@ -53,8 +53,8 @@ export default function SpotlightCard({
     <div
       ref={divRef}
       className={cn(
-        "relative overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-rich-black-200/50 p-6 shadow-sm transition-colors hover:shadow-md",
-        isFocused && "border-teal dark:border-teal-400 ring-1 ring-teal dark:ring-teal-400",
+        "relative overflow-hidden rounded-xl bg-white dark:bg-rich-black-200/50 p-6 shadow-sm transition-all duration-300 hover:shadow-md",
+        isFocused && "ring-1 ring-teal dark:ring-teal-400",
         className,
       )}
       onMouseMove={handleMouseMove}

@@ -38,11 +38,14 @@ import {
   X,
   ChevronDown,
   BoltIcon,
+  Contact
 } from "lucide-react"
 
 const company = [
   { title: "Who We Are", href: "/who-we-are", icon: User },
   { title: "Our Team", href: "/our-team", icon: Users },
+  { title: "Contact Us", href: "/contact-us", icon:Contact },
+
 ]
 
 const services = [
@@ -81,7 +84,7 @@ const services = [
 ]
 
 const solutions = [
-  { title: "Automation Solutions", href: "/solutions/automation", icon: Cpu },
+  // { title: "Automation Solutions", href: "/solutions/automation", icon: Cpu },
   {
     title: "Datacenter Solutions",
     href: "/solutions/datacenter",

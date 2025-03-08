@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={montserrat.className} suppressHydrationWarning>
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <Navbar />
           <main className="relative overflow-hidden">{children}</main>
           <Footer />

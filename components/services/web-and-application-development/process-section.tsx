@@ -1,6 +1,6 @@
-"use client";
+"use client"
 
-import { FadeInSection } from "@/components/FadeInSection";
+import { FadeInSection } from "@/components/FadeInSection"
 
 const steps = [
   {
@@ -27,40 +27,38 @@ const steps = [
     description:
       "We believe in the power of continuous improvement. After implementation, we offer ongoing support and regular reviews to ensure that your IT strategy evolves with your business needs.",
   },
-];
+]
 
 export function ProcessSection() {
   return (
-    <section className="py-24 bg-[#7F3AFF] relative overflow-hidden">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl transform -translate-x-1/2 translate-y-1/2" />
+    <section className="py-24 px-4 md:px-6 lg:px-8 bg-gradient-to-r from-teal to-caribbean text-white relative overflow-hidden">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
       </div>
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+      <div className="relative mx-auto max-w-7xl">
         <FadeInSection>
-          <h2 className="mb-16 text-center text-4xl font-bold text-white">
-            OUR PROCESS
-          </h2>
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step, index) => (
-              <div key={step.number} className="text-center">
-                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-white">
-                  <span className="text-3xl font-bold text-[#008080]">
-                    {step.number}
-                  </span>
-                </div>
-                <h3 className="mb-4 text-2xl font-semibold text-white">
-                  {step.title}
-                </h3>
-                <p className="text-lg text-white/90">{step.description}</p>
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-1/2 left-1/2 w-full h-0.5 bg-white/20 transform -translate-y-1/2" />
-                )}
-              </div>
-            ))}
-          </div>
+          <h2 className="mb-16 text-center text-4xl md:text-5xl font-bold text-white">OUR PROCESS</h2>
         </FadeInSection>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {steps.map((step, index) => (
+            <FadeInSection key={step.number}>
+              <div className="text-center relative">
+                <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm border border-white/30 transition-all duration-300 hover:bg-white/30 shadow-lg">
+                  <span className="text-3xl font-bold text-white">{step.number}</span>
+                </div>
+                <h3 className="mb-4 text-2xl font-semibold text-white">{step.title}</h3>
+                <p className="text-lg text-white/90">{step.description}</p>
+                
+              </div>
+            </FadeInSection>
+          ))}
+        </div>
       </div>
     </section>
-  );
+  )
 }
+
