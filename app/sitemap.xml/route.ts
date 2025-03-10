@@ -14,7 +14,7 @@ const pages = [
   { url: '/services/infrastructure', changefreq: 'weekly', priority: 0.7 },
   { url: '/services/web-and-application-development', changefreq: 'weekly', priority: 0.7 },
   { url: '/services/managed-services', changefreq: 'weekly', priority: 0.7 },
-  { url: '/solutions/automation', changefreq: 'weekly', priority: 0.7 },
+  // { url: '/solutions/automation', changefreq: 'weekly', priority: 0.7 },
   { url: '/solutions/datacenter', changefreq: 'weekly', priority: 0.7 },
   { url: '/solutions/erp', changefreq: 'weekly', priority: 0.7 },
   { url: '/consulting', changefreq: 'monthly', priority: 0.6 },
