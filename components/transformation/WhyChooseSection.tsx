@@ -14,7 +14,7 @@ const reasons = [
   {
     title: "Trusted Partners",
     description:
-      "Elysian Innovations collaborates with top industry partners, including AWS, Red Hat, IBM, Microsoft, VMware, and more.",
+      "Elysian Innovations collaborates with top industry partners",
     icon: Users,
   },
   {
