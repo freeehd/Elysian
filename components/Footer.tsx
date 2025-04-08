@@ -27,6 +27,10 @@ const services = [
     title: "Web and Application Development",
     href: "/services/web-and-application-development",
   },
+  {
+    title: "Digital Marketing",
+    href: "/services/digital-marketing",
+  },
   { title: "Managed Services", href: "/services/managed-services" },
 ]
 
@@ -36,10 +40,8 @@ const solutions = [
 ]
 
 const socialLinks = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/elysian-innovations", label: "LinkedIn" },
+
 ]
 
 export default function Footer() {

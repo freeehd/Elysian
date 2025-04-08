@@ -1,6 +1,6 @@
 "use client"
 
-import { Box, Settings, GitBranch, Cloud, Cog, Code, Server } from "lucide-react"
+import { Box, Settings, GitBranch, Cloud, Cog, Code, Server, Globe } from "lucide-react"
 import Link from "next/link"
 import { FadeInSection } from "./FadeInSection"
 
@@ -60,6 +60,13 @@ const services = [
       "Build robust, scalable infrastructure foundations that support your business growth and digital transformation initiatives.",
     href: "/services/infrastructure",
     icon: Server,
+  },
+  {
+    title: "Digital Marketing",
+    description:
+      "Drive strategic growth with data-driven digital marketing solutions including SEO, social media, content creation, and paid advertising campaigns.",
+    href: "/services/digital-marketing",
+    icon: Globe,
   },
 ]
 
@@ -125,4 +132,3 @@ export default function ServicesSection() {
     </section>
   )
 }
-

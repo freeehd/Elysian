@@ -38,6 +38,7 @@ import {
   X,
   ChevronDown,
   BoltIcon,
+  Globe,
   Contact
 } from "lucide-react"
 
@@ -80,6 +81,11 @@ const services = [
     title: "Managed Services",
     href: "/services/managed-services",
     icon: Settings,
+  },
+  {
+    title: "Digital Marketing",
+    href: "/services/digital-marketing",
+    icon: Globe,
   },
 ]
 
