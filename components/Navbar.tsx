@@ -29,7 +29,6 @@ import {
   BarChart,
   Building2,
   Network,
-  Cpu,
   LineChart,
   BrainCircuit,
   BookOpen,
@@ -39,14 +38,13 @@ import {
   ChevronDown,
   BoltIcon,
   Globe,
-  Contact
+  Contact,
 } from "lucide-react"
 
 const company = [
   { title: "Who We Are", href: "/who-we-are", icon: User },
   { title: "Our Team", href: "/our-team", icon: Users },
-  { title: "Contact Us", href: "/contact-us", icon:Contact },
-
+  { title: "Contact Us", href: "/contact-us", icon: Contact },
 ]
 
 const services = [
@@ -82,10 +80,31 @@ const services = [
     href: "/services/managed-services",
     icon: Settings,
   },
+  // Remove or comment out the original Digital Marketing entry
+  // {
+  //   title: "Digital Marketing",
+  //   href: "/services/digital-marketing",
+  //   icon: Globe,
+  // },
+]
+
+const digitalMarketing = [
   {
     title: "Digital Marketing",
     href: "/services/digital-marketing",
     icon: Globe,
+    submenu: [
+      {
+        title: "Strategy & Planning",
+        href: "/services/digital-marketing/strategy-planning",
+        icon: LineChart,
+      },
+      {
+        title: "Execution & Campaigns",
+        href: "/services/digital-marketing/execution-campaigns",
+        icon: BarChart,
+      },
+    ],
   },
 ]
 
@@ -209,6 +228,23 @@ export default function NavBar() {
                           {services.map((item) => (
                             <ListItem key={item.title} title={item.title} href={item.href} icon={item.icon} />
                           ))}
+
+                          {/* Digital Marketing with submenu */}
+                          {digitalMarketing.map((item) => (
+                            <div key={item.title}>
+                              <ListItem title={item.title} href={item.href} icon={item.icon} />
+                              <ul className="ml-6 mt-1 grid gap-1">
+                                {item.submenu.map((subItem) => (
+                                  <ListItem
+                                    key={subItem.title}
+                                    title={subItem.title}
+                                    href={subItem.href}
+                                    icon={subItem.icon}
+                                  />
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
                         </ul>
                       </div>
                       <div>
@@ -271,7 +307,7 @@ export default function NavBar() {
               <div className="py-4 space-y-4">
                 <MobileMenuItem title="COMPANY" items={company} />
                 <MobileMenuItem title="APPROACH" items={approach} />
-                <MobileMenuItem title="SERVICES & SOLUTIONS" items={[...services, ...solutions]} />
+                <MobileMenuItem title="SERVICES & SOLUTIONS" items={[...services, ...digitalMarketing, ...solutions]} />
 
                 <div className="pt-4">
                   <Button asChild className="w-full bg-teal hover:bg-caribbean text-white">
@@ -319,11 +355,19 @@ type MobileMenuItemProps = {
     title: string
     href: string
     icon: React.ComponentType<{ className?: string }>
+    submenu?: {
+      title: string
+      href: string
+      icon: React.ComponentType<{ className?: string }>
+    }[]
   }[]
 }
 
 function MobileMenuItem({ title, items }: MobileMenuItemProps) {
   const [isOpen, setIsOpen] = useState(false)
+
+  // Check if any items have submenus
+  const hasSubmenus = items.some((item) => "submenu" in item)
 
   return (
     <div>
@@ -346,14 +390,31 @@ function MobileMenuItem({ title, items }: MobileMenuItemProps) {
           >
             <div className="px-4 py-2 space-y-2">
               {items.map((item) => (
-                <Link
-                  key={item.title}
-                  href={item.href}
-                  className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-teal dark:hover:text-caribbean rounded-md transition-colors"
-                >
-                  <item.icon className="h-4 w-4" />
-                  <span>{item.title}</span>
-                </Link>
+                <div key={item.title}>
+                  <Link
+                    href={item.href}
+                    className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-teal dark:hover:text-caribbean rounded-md transition-colors"
+                  >
+                    <item.icon className="h-4 w-4" />
+                    <span>{item.title}</span>
+                  </Link>
+
+                  {/* Render submenu if it exists */}
+                  {item.submenu && (
+                    <div className="ml-6 space-y-1 mt-1">
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.title}
+                          href={subItem.href}
+                          className="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-teal dark:hover:text-caribbean rounded-md transition-colors"
+                        >
+                          <subItem.icon className="h-4 w-4" />
+                          <span>{subItem.title}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </motion.div>
@@ -362,4 +423,3 @@ function MobileMenuItem({ title, items }: MobileMenuItemProps) {
     </div>
   )
 }
-
