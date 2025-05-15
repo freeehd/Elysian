@@ -1,10 +1,11 @@
-import Guide from "@/components/Guide";
-import Spacer from "@/components/Spacer";
-import Services from "@/components/ServiceGrid";
-import ServicesSection from "@/components/services-section";
-import SolutionsSection from "@/components/SolutionsSection";
-import TechnologyExpertise from "@/components/TechnologyExpertise";
-import ProcessSection from "@/components/ProcessSection";
+import Guide from "@/components/Guide"
+import Services from "@/components/ServiceGrid"
+import ServicesSection from "@/components/services-section"
+import SolutionsSection from "@/components/SolutionsSection"
+import TechnologyExpertise from "@/components/TechnologyExpertise"
+import ProcessSection from "@/components/ProcessSection"
+import PartnersSection from "@/components/PartnersSection"
+
 export default function Home() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function Home() {
       <SolutionsSection />
       <TechnologyExpertise />
       <ProcessSection />
+      <PartnersSection />
     </>
-  );
+  )
 }
