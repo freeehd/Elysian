@@ -48,7 +48,25 @@ export default function PartnersSection() {
               </Link>
             </div>
 
-            {/* You can add more partners here in the future */}
+            <div className="group">
+              <Link
+                href="https://www.hostinger.com/pk?REFERRALCODE=FEOSARIMAMIZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block p-6 bg-white dark:bg-rich-black-200/70 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 dark:border-rich-black-300"
+              >
+                <div className="flex flex-col items-center">
+                  <Image
+                    src="/images/hostinger-badge.png"
+                    alt="Hostinger Partner badge"
+                    width={180}
+                    height={120}
+                    className="mb-4"
+                  />
+                  <p className="text-center text-gray-700 dark:text-gray-300 font-medium">Proud Partner</p>
+                </div>
+              </Link>
+            </div>
           </div>
         </FadeInSection>
       </div>

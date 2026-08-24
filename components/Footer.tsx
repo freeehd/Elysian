@@ -95,6 +95,21 @@ export default function Footer() {
                   </a>
                 ))}
               </div>
+
+              <Link
+                href="https://www.hostinger.com/pk?REFERRALCODE=FEOSARIMAMIZ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-8"
+              >
+                <Image
+                  src="/images/hostinger-footer-badge.png"
+                  alt="Hostinger Partner"
+                  width={160}
+                  height={60}
+                  className="h-auto w-[160px]"
+                />
+              </Link>
             </div>
 
             {/* Quick Links */}
